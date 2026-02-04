@@ -2,13 +2,18 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex items-center space-x-2">
-      <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary text-primary-foreground font-bold text-lg">
-        D
+    <Link href="/" className="flex items-center gap-2.5 group">
+      <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-primary-foreground font-bold text-sm shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+        <span>D</span>
       </div>
-      <span className="hidden font-bold text-xl text-primary sm:inline">
-        Debate Club
-      </span>
+      <div className="hidden sm:flex flex-col">
+        <span className="font-bold text-sm leading-none bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Debate
+        </span>
+        <span className="text-xs font-semibold text-muted-foreground">
+          Club
+        </span>
+      </div>
     </Link>
   );
 }

@@ -35,10 +35,10 @@ export default function CurrentPanel() {
               height={400}
               placeholder="blur"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="text-xl font-semibold">{advisor.name}</h3>
-              <p className="text-sm text-gray-300">{advisor.designation}</p>
+              <p className="text-sm text-white/70">{advisor.designation}</p>
             </div>
           </div>
         ))}
@@ -59,20 +59,22 @@ export default function CurrentPanel() {
               height={400}
               placeholder="blur"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             <div className="absolute bottom-4 left-4 text-white">
               <h3 className="text-xl font-semibold">{gb.fullName}</h3>
-              <p className="text-sm text-gray-300">{gb.designation}</p>
+              <p className="text-sm text-white/70">{gb.designation}</p>
             </div>
           </div>
         ))}
       </div>
 
       {/* View Full Panel Button */}
-      <div className="mt-8 flex justify-center">
-        <Button className="inline-flex h-12 items-center justify-center rounded-md bg-[#127cc1] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1f4864] disabled:pointer-events-none disabled:opacity-50">
-          <Link href="/about/executive-body">Full Executive Body 2025</Link>
-        </Button>
+      <div className="mt-12 flex justify-center">
+        <Link href="/about/executive-body">
+          <Button size="lg" className="px-8">
+            Full Executive Body 2025
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -34,12 +34,16 @@ const activities = [
 
 export default function Activities() {
   return (
-    <div className="group relative flex gap-3 overflow-hidden bg-muted/30 p-6">
-      <div className="animate-loop-scroll flex gap-8 space-x-16 whitespace-nowrap group-hover:paused">
+    <div className="group relative flex gap-3 overflow-hidden bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5 py-12 px-4">
+      <div className="animate-loop-scroll flex gap-12 space-x-20 whitespace-nowrap group-hover:paused">
         {activities.concat(activities).map((activity, index) => (
-          <div key={index} className="flex items-center space-x-8">
-            <p className="text-5xl font-bold text-primary md:text-7xl">{activity}</p>
-            <Image src={star} alt="star" width={64} height={64} />
+          <div key={index} className="flex items-center gap-6 shrink-0">
+            <p className="text-4xl font-black md:text-6xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              {activity}
+            </p>
+            <div className="flex-shrink-0">
+              <Image src={star} alt="decoration" width={48} height={48} className="opacity-60" />
+            </div>
           </div>
         ))}
       </div>

@@ -116,90 +116,96 @@ const Footer = () => {
   }
 
   return (
-    <div className="relative bg-card text-card-foreground">
-      <div className="relative z-10 py-12 md:px-24 md:py-16">
-        <footer className="footer text-base-content mt-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
-          <aside className="space-y-8">
-            <div>
-              <div className="text-center md:text-left">
-                <h2 className="text-2xl font-bold text-primary">Debate Club</h2>
-                <p className="text-sm text-muted-foreground mt-2">Excellence through Debate</p>
-              </div>
-              <div className="my-6 text-center md:text-left space-y-2">
-                <p className="text-sm">
-                  <strong>Contact:</strong> +1 (555) 123-4567
-                </p>
-                <p className="text-sm">
-                  <strong>Email:</strong> info@debateclub.edu
-                </p>
-                <p className="text-sm">
-                  <strong>Location:</strong> University Campus Center
-                  <br />
-                  Academic Building, Room 201
-                </p>
-              </div>
-              <div className="flex justify-center gap-3 md:justify-start">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
-                  <Link href={buccSocials.facebook} target="_blank" className="text-primary">
-                    <Facebook size={20} />
-                  </Link>
-                </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
-                  <Link href={buccSocials.linkedin} target="_blank" className="text-primary">
-                    <Linkedin size={20} />
-                  </Link>
-                </div>
-                <div className="flex h-9 w-9 items-center justify center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
-                  <Link href={buccSocials.instagram} target="_blank" className="text-primary">
-                    <Instagram size={20} />
-                  </Link>
-                </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
-                  <Link href={buccSocials.youtube} target="_blank" className="text-primary">
-                    <Youtube size={20} />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </aside>
+    <div className="relative w-full">
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-secondary/5 blur-3xl" />
+      </div>
 
-          {footer_menu.map((menu, index) => (
-            <nav key={index} className="space-y-4 text-center md:text-right">
-              <h6 className="text-lg font-bold text-foreground">{menu.title}</h6>
-              {menu.childrens.map((child, idx) => (
-                <Link
-                  key={idx}
-                  href={child.path}
-                  className="block text-sm text-muted-foreground transition duration-300 hover:text-primary"
-                >
-                  {child.title}
-                </Link>
+      <div className="relative z-10 border-t border-border bg-card/50 backdrop-blur-sm">
+        <div className="py-16 md:py-24">
+          <div className="container">
+            <footer className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 mb-12">
+              <aside className="space-y-6">
+                <div>
+                  <div className="inline-flex items-center gap-2 mb-2">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-white font-bold">
+                      D
+                    </div>
+                    <div>
+                      <h2 className="font-bold text-sm leading-none bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Debate
+                      </h2>
+                      <p className="text-xs text-muted-foreground">Club</p>
+                    </div>
+                  </div>
+                  <p className="text-xs text-muted-foreground mt-3">
+                    Excellence through debate and community
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-xs font-semibold text-foreground">Contact</p>
+                  <p className="text-xs text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-xs text-muted-foreground">info@debateclub.edu</p>
+                </div>
+                <div className="flex gap-3 pt-2">
+                  <Link href={buccSocials.facebook} target="_blank" className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 text-primary hover:from-primary hover:to-secondary hover:text-white transition-all">
+                    <Facebook size={16} />
+                  </Link>
+                  <Link href={buccSocials.instagram} target="_blank" className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 text-primary hover:from-primary hover:to-secondary hover:text-white transition-all">
+                    <Instagram size={16} />
+                  </Link>
+                  <Link href={buccSocials.linkedin} target="_blank" className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 text-primary hover:from-primary hover:to-secondary hover:text-white transition-all">
+                    <Linkedin size={16} />
+                  </Link>
+                  <Link href={buccSocials.youtube} target="_blank" className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 text-primary hover:from-primary hover:to-secondary hover:text-white transition-all">
+                    <Youtube size={16} />
+                  </Link>
+                </div>
+              </aside>
+
+              {footer_menu.map((menu, index) => (
+                <nav key={index} className="space-y-4">
+                  <h6 className="font-bold text-sm text-foreground">{menu.title}</h6>
+                  <ul className="space-y-2">
+                    {menu.childrens.map((child, idx) => (
+                      <li key={idx}>
+                        <Link
+                          href={child.path}
+                          className="text-xs text-muted-foreground hover:text-primary transition-colors duration-300"
+                        >
+                          {child.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
               ))}
-            </nav>
-          ))}
-        </footer>
+            </footer>
+          </div>
+        </div>
+
+        <div className="border-t border-border/50 py-6">
+          <div className="container flex flex-col items-center justify-between gap-4 md:flex-row text-center md:text-left">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} Debate Club. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground">
+              Crafted with excellence
+            </p>
+          </div>
+        </div>
       </div>
-      <div className="border-t py-6 text-center">
-        <aside>
-          <p className="text-sm text-muted-foreground">
-            &copy; Debate Club {new Date().getFullYear()} - All rights reserved | Made with passion
-          </p>
-        </aside>
-      </div>
+
       {showScroll && (
         <button
-          className="fixed bottom-20 right-4 z-30 rounded-full bg-primary p-2 text-primary-foreground hover:bg-primary/80 transition"
+          className="fixed bottom-8 right-8 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-secondary text-white shadow-lg hover:shadow-xl hover:scale-110 transition-all duration-300"
           onClick={scrollTop}
           aria-label="Scroll to top"
         >
-          <ArrowUp />
+          <ArrowUp size={20} />
         </button>
       )}
-      <div className="absolute inset-0 z-0 flex items-end justify-center overflow-clip opacity-5 md:items-center">
-        <h1 className="text-[45vw] font-extrabold text-foreground md:text-[55vw]">
-          D
-        </h1>
-      </div>
     </div>
   );
 };

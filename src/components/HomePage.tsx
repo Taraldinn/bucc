@@ -1,6 +1,7 @@
-import Hero from "@/components/homepage/Hero";
+import Hero from "./homepage/Hero";
 import AboutUs from "./homepage/AboutUs";
 import Activities from "./homepage/Activities";
+import Features from "./homepage/Features";
 import CurrentPanel from "./homepage/CurrentPanel";
 import Departments from "./homepage/Departments";
 import Events from "./homepage/Events";
@@ -12,6 +13,7 @@ export default function HomePage() {
     <div className="w-screen overflow-hidden">
       <Hero />
       <Activities />
+      <Features />
       <AboutUs />
       <CurrentPanel />
       <Departments />

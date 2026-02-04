@@ -3,45 +3,59 @@ import aboutUsImage from "/public/images/homepage/bucc-about-us.jpg";
 
 export default function AboutUs() {
   return (
-    <section className="flex w-full items-center justify-center px-10 py-12 md:px-4 md:py-16">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-10 sm:px-10 md:grid-cols-2 md:gap-16">
-          <div className="space-y-4">
-            <div className="inline-block rounded-lg py-1 text-base text-primary font-semibold">
-              About Our Club
-            </div>
-            <h2 className="text-3xl font-bold text-foreground">Master the Art of Argumentation</h2>
-            <div className="space-y-4">
-              <div className="flex flex-col gap-4">
-                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
-                  The University Debate Club is a thriving community of passionate debaters, public speakers, and critical thinkers dedicated to advancing the art of argumentation. Our mission is to provide students with a platform to develop persuasive skills, engage in rigorous intellectual discourse, and compete at the highest levels of debate.
-                </p>
-                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
-                  We host a wide range of events including formal debate tournaments, workshops on rhetoric and argumentation, public speaking training, and networking opportunities with accomplished speakers and debate professionals. Our members have gone on to win regional and national debate competitions, establishing themselves as leaders in communication and critical thinking.
-                </p>
-                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
-                  Whether you&apos;re a seasoned competitor or just beginning your debate journey, our club provides the resources, mentorship, and community you need to excel. Join us as we explore complex issues, sharpen our analytical skills, and grow together in an environment that values intellectual rigor and respectful discourse.
-                </p>
+    <section className="w-full px-4 py-16 md:py-24">
+      <div className="container">
+        <div className="grid gap-12 md:grid-cols-2 md:gap-20 items-center">
+          <div className="space-y-8">
+            <div className="space-y-3">
+              <div className="inline-block rounded-full bg-secondary/10 px-4 py-2 text-sm font-bold text-secondary">
+                ABOUT US
               </div>
+              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+                <span className="text-foreground">Master the Art of</span>
+                <br />
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Argumentation
+                </span>
+              </h2>
+            </div>
+            
+            <div className="space-y-5">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                The University Debate Club is a thriving community of passionate debaters, public speakers, and critical thinkers dedicated to advancing the art of argumentation.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="rounded-lg bg-primary/5 border border-primary/10 p-4">
+                  <h3 className="font-bold text-primary mb-2">Our Mission</h3>
+                  <p className="text-sm text-muted-foreground">Develop persuasive skills and compete at the highest levels</p>
+                </div>
+                <div className="rounded-lg bg-secondary/5 border border-secondary/10 p-4">
+                  <h3 className="font-bold text-secondary mb-2">Our Vision</h3>
+                  <p className="text-sm text-muted-foreground">Lead tomorrow's leaders through rigorous discourse</p>
+                </div>
+              </div>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                Whether you&apos;re a seasoned competitor or just beginning, our club provides resources, mentorship, and community you need to excel.
+              </p>
             </div>
           </div>
-          <div className="mt-4 flex items-center justify-center">
-            <div className="relative w-full max-w-[550px] overflow-hidden rounded-xl sm:h-[500px] md:h-[400px]">
+
+          <div className="relative">
+            <div className="relative w-full overflow-hidden rounded-2xl aspect-square md:aspect-auto md:h-[500px] shadow-2xl group">
               <Image
                 src={aboutUsImage}
                 placeholder="blur"
                 width="550"
-                height="310"
-                alt="BUCC"
-                className="h-full w-full rounded-xl object-cover object-center"
+                height="550"
+                alt="Debate Club Community"
+                className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-t from-gray-900/80 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-                <div className="space-y-4 rounded-xl text-white">
-                  <p className="md:3xl text-2xl">
-                    Excellence through Debate, Excellence through Community
-                  </p>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-white/10" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 text-center">
+                <p className="text-2xl md:text-3xl font-bold text-white">
+                  Excellence through Community
+                </p>
               </div>
             </div>
           </div>
