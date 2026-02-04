@@ -98,7 +98,7 @@
     "daisyui": "^4.12.10",
     "dotenv": "^16.5.0",
     "drizzle-kit": "^0.30.0",
-    "eslint": "^8",
+    "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "turbo": "^2.0.0",
     "pg": "^8.13.1",
