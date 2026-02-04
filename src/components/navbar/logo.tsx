@@ -1,25 +1,19 @@
-import Image from "next/image";
 import Link from "next/link";
-import BUCCIcon from "/public/assets/bucc-icon.svg";
-import BUCCLogo from "/public/assets/bucc-logo.svg";
 
 export default function Logo() {
   return (
-    <div>
-      <Link href="/">
-        <picture>
-          <source media="(max-width: 768px)" srcSet={BUCCIcon.src} width={60} />
-          <source media="(min-width: 769px)" srcSet={BUCCLogo.src} />
-
-          <Image
-            className="cursor-pointer dark:filter dark:invert dark:grayscale dark:brightness-0"
-            src={BUCCLogo.src}
-            alt="BUCC Logo"
-            width={160}
-            height={60}
-          />
-        </picture>
-      </Link>
-    </div>
+    <Link href="/" className="flex items-center gap-2.5 group">
+      <div className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-primary-foreground font-bold text-sm shadow-lg group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
+        <span>D</span>
+      </div>
+      <div className="hidden sm:flex flex-col">
+        <span className="font-bold text-sm leading-none bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+          Debate
+        </span>
+        <span className="text-xs font-semibold text-muted-foreground">
+          Club
+        </span>
+      </div>
+    </Link>
   );
 }

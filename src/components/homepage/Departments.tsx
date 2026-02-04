@@ -11,7 +11,7 @@ export default function Departments() {
   );
 
   return (
-    <section className="bg-gray-100 px-4 py-12 text-center dark:bg-gray-900 dark:text-gray-100 md:px-20">
+    <section className="bg-muted px-4 py-12 text-center dark:bg-card md:px-20">
       <div className="container">
         {" "}
         <div className="mx-auto">
@@ -27,16 +27,16 @@ export default function Departments() {
                 key={index}
                 className={`cursor-pointer rounded-lg px-4 py-2 transition duration-300 ${
                   department.name === selectedDepartment.name
-                    ? "bg-blue-100 pt-2 dark:bg-blue-900"
-                    : "mb:hover:bg-gray-100 bg-white pt-2 dark:bg-gray-800 md:bg-transparent md:dark:bg-transparent md:dark:hover:bg-gray-700"
+                    ? "bg-primary/10 pt-2 dark:bg-primary/20"
+                    : "bg-background pt-2 dark:bg-card md:bg-transparent md:dark:bg-transparent md:dark:hover:bg-muted/50"
                 }`}
                 onClick={() => setSelectedDepartment(department)}
               >
                 <h2
                   className={`mb-2 text-lg font-semibold ${
                     department.name === selectedDepartment.name
-                      ? "pt-2 text-blue-700 dark:text-blue-300"
-                      : "pt-2 text-gray-800 dark:text-gray-300"
+                      ? "pt-2 text-primary dark:text-primary"
+                      : "pt-2 text-foreground dark:text-foreground"
                   }`}
                 >
                   {department.name}

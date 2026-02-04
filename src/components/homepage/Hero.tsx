@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,54 +10,73 @@ export default function Hero() {
   const videoId = "UpPdA9WClQ4";
 
   return (
-    <section className="w-full py-8 lg:py-12">
-      <div className="container flex flex-col items-center justify-center space-y-8 px-4 text-center md:px-6">
-        <div className="max-w-4xl space-y-4">
-          <h1 className="bg-gradient-to-r from-[#1f4864] to-[#127cc1] bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-            BRAC University Computer Club
+    <section className="relative w-full overflow-hidden bg-gradient-to-br from-background via-background to-primary/5 py-20 lg:py-32">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-20 -left-40 h-96 w-96 rounded-full bg-secondary/10 blur-3xl" />
+      </div>
+
+      <div className="container relative z-10 flex flex-col items-center justify-center space-y-10 px-4 text-center md:px-6">
+        <div className="max-w-4xl space-y-6">
+          <div className="inline-block rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+            Welcome to Excellence
+          </div>
+          <h1 className="text-5xl font-bold leading-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Master Debate
+            </span>
+            <br />
+            <span className="text-foreground">Lead Tomorrow</span>
           </h1>
-          <p className="text-lg text-gray-900 dark:text-gray-200 md:text-xl">
-            A community for tech enthusiasts from BRAC University, where we
-            explore the latest advancements in computer science and technology.
+          <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl lg:text-2xl leading-relaxed">
+            Join a thriving community of eloquent minds. Develop critical thinking, master persuasion, and compete at the highest levels.
           </p>
         </div>
-        <div className="flex flex-row gap-4">
-          <Link
-            href="/registration"
-            className="inline-flex h-12 items-center justify-center rounded-md bg-[#127cc1] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1f4864] disabled:pointer-events-none disabled:opacity-50"
-          >
-            Join the Club
+
+        <div className="flex flex-col gap-4 sm:flex-row justify-center">
+          <Link href="/registration">
+            <Button size="lg" className="w-full gap-2 sm:w-auto bg-primary hover:bg-primary/90 text-lg font-semibold px-8 h-12">
+              Start Your Journey
+              <span>→</span>
+            </Button>
           </Link>
-          <Link
-            href="/about/about-us"
-            className="inline-flex h-12 items-center justify-center rounded-md border border-[#127cc1] bg-white px-8 text-sm font-medium text-[#127cc1] shadow transition-colors hover:bg-[#127cc1] hover:text-white disabled:pointer-events-none disabled:opacity-50 dark:border-white dark:text-[#127cc1] dark:hover:bg-white dark:hover:text-[#127cc1]"
-          >
-            Learn More
+          <Link href="/about/about-us">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="w-full sm:w-auto text-lg font-semibold px-8 h-12 border-2 border-secondary text-secondary hover:bg-secondary/5"
+            >
+              Explore More
+            </Button>
           </Link>
         </div>
-        <div className="relative w-full max-w-5xl overflow-hidden rounded-xl">
-          <div className="relative">
+
+        <div className="relative w-full max-w-6xl pt-8">
+          <div className="relative overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src={heroBanner}
-              alt="BRAC University Computer Club Executive Board 2024 Group Photo"
-              className="h-auto w-full rounded-xl object-cover"
+              alt="University Debate Club Members"
+              className="h-auto w-full object-cover"
               width={1200}
               height={675}
               placeholder="blur"
+              priority
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-300 hover:opacity-100">
-              <button
-                className="rounded-full bg-[#127cc1]/30 p-4 text-[#127cc1]/30 backdrop-blur-md backdrop-filter"
-                onClick={() =>
-                  window.open(
-                    `https://www.youtube.com/watch?v=${videoId}`,
-                    "_blank",
-                  )
-                }
-              >
-                <Play size={60} />
-              </button>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+            <button
+              className="absolute inset-0 flex items-center justify-center group"
+              onClick={() =>
+                window.open(
+                  `https://www.youtube.com/watch?v=${videoId}`,
+                  "_blank",
+                )
+              }
+              aria-label="Play video"
+            >
+              <div className="rounded-full bg-primary p-4 text-white shadow-lg group-hover:scale-110 group-hover:shadow-2xl transition-all duration-300">
+                <Play size={32} fill="currentColor" />
+              </div>
+            </button>
           </div>
         </div>
       </div>

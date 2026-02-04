@@ -114,7 +114,7 @@ export default function ActionButtons() {
                           Login
                         </Link>
                       </Button>
-                      <Button className="text-md w-full bg-[#127cc1] text-white hover:bg-[#1f4864] dark:hover:bg-[#1f4864]">
+                      <Button className="text-md w-full">
                         <Link
                           onClick={() => {
                             setIsSheetOpen(false);
@@ -176,7 +176,7 @@ export default function ActionButtons() {
               Login
             </Link>
           </Button>
-          <Button className="text-md bg-[#127cc1] text-white hover:bg-[#1f4864] dark:hover:bg-[#1f4864]">
+          <Button className="text-md">
             <Link onClick={handleSheetClose} href={"/registration"}>
               Register
             </Link>
