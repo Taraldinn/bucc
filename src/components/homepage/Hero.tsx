@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -9,50 +10,48 @@ export default function Hero() {
   const videoId = "UpPdA9WClQ4";
 
   return (
-    <section className="w-full py-8 lg:py-12">
+    <section className="w-full py-12 lg:py-20">
       <div className="container flex flex-col items-center justify-center space-y-8 px-4 text-center md:px-6">
         <div className="max-w-4xl space-y-4">
-          <h1 className="bg-gradient-to-r from-[#1f4864] to-[#127cc1] bg-clip-text text-4xl font-bold text-transparent sm:text-5xl md:text-6xl lg:text-7xl">
-            BRAC University Computer Club
+          <h1 className="text-4xl font-bold text-primary sm:text-5xl md:text-6xl lg:text-7xl">
+            University Debate Club
           </h1>
-          <p className="text-lg text-gray-900 dark:text-gray-200 md:text-xl">
-            A community for tech enthusiasts from BRAC University, where we
-            explore the latest advancements in computer science and technology.
+          <p className="text-lg text-muted-foreground md:text-xl">
+            A thriving community of eloquent minds united by the art of argumentation. Develop critical thinking, master persuasion, and compete at the highest levels of debate.
           </p>
         </div>
-        <div className="flex flex-row gap-4">
-          <Link
-            href="/registration"
-            className="inline-flex h-12 items-center justify-center rounded-md bg-[#127cc1] px-8 text-sm font-medium text-white shadow transition-colors hover:bg-[#1f4864] disabled:pointer-events-none disabled:opacity-50"
-          >
-            Join the Club
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Link href="/registration">
+            <Button size="lg" className="w-full sm:w-auto">
+              Join Our Team
+            </Button>
           </Link>
-          <Link
-            href="/about/about-us"
-            className="inline-flex h-12 items-center justify-center rounded-md border border-[#127cc1] bg-white px-8 text-sm font-medium text-[#127cc1] shadow transition-colors hover:bg-[#127cc1] hover:text-white disabled:pointer-events-none disabled:opacity-50 dark:border-white dark:text-[#127cc1] dark:hover:bg-white dark:hover:text-[#127cc1]"
-          >
-            Learn More
+          <Link href="/about/about-us">
+            <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              Learn More
+            </Button>
           </Link>
         </div>
-        <div className="relative w-full max-w-5xl overflow-hidden rounded-xl">
+        <div className="relative w-full max-w-5xl overflow-hidden rounded-lg">
           <div className="relative">
             <Image
               src={heroBanner}
-              alt="BRAC University Computer Club Executive Board 2024 Group Photo"
-              className="h-auto w-full rounded-xl object-cover"
+              alt="University Debate Club Members"
+              className="h-auto w-full rounded-lg object-cover"
               width={1200}
               height={675}
               placeholder="blur"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/45 opacity-0 transition-opacity duration-300 hover:opacity-100">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 hover:opacity-100">
               <button
-                className="rounded-full bg-[#127cc1]/30 p-4 text-[#127cc1]/30 backdrop-blur-md backdrop-filter"
+                className="rounded-full bg-primary/40 p-4 text-primary-foreground backdrop-blur-sm"
                 onClick={() =>
                   window.open(
                     `https://www.youtube.com/watch?v=${videoId}`,
                     "_blank",
                   )
                 }
+                aria-label="Play video"
               >
                 <Play size={60} />
               </button>

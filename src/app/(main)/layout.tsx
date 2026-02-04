@@ -9,7 +9,7 @@ import { Outfit } from "next/font/google";
 const font = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BRAC University Computer Club | Upgrade Yourself",
+  title: "University Debate Club | Master the Art of Argumentation",
   icons: [
     {
       rel: "icon",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   ],
   description:
-    "BRAC University Computer Club (BUCC) is the oldest club of BRAC university founded in 2001.",
+    "Join our thriving community of passionate debaters and public speakers. Develop critical thinking, master persuasion, and compete at the highest levels of debate.",
 };
 
 export default function RootLayout({

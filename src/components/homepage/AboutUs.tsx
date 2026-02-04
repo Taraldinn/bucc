@@ -7,39 +7,20 @@ export default function AboutUs() {
       <div className="container px-4 md:px-6">
         <div className="grid gap-10 sm:px-10 md:grid-cols-2 md:gap-16">
           <div className="space-y-4">
-            <div className="inline-block rounded-lg py-1 text-base">
-              Wonder what BUCC is all about?
+            <div className="inline-block rounded-lg py-1 text-base text-primary font-semibold">
+              About Our Club
             </div>
-            <h2 className="">Upgrade Yourself: From Enthusiasts to Experts</h2>
+            <h2 className="text-3xl font-bold text-foreground">Master the Art of Argumentation</h2>
             <div className="space-y-4">
-              <div className="flex flex-col gap-2">
-                <p className="text-sm font-normal text-muted-foreground">
-                  At BUCC (BRAC University Computer Club), we believe in
-                  promoting creativity and innovation in tech enthusiasts,
-                  preparing them to lead the next generation. Our mission is to
-                  offer BRAC University students a platform to engage in
-                  Computer Science and Technology programs regardless of their
-                  department. This community not only grows together but also
-                  provides a promising platform for both current and future
-                  contributors.
+              <div className="flex flex-col gap-4">
+                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
+                  The University Debate Club is a thriving community of passionate debaters, public speakers, and critical thinkers dedicated to advancing the art of argumentation. Our mission is to provide students with a platform to develop persuasive skills, engage in rigorous intellectual discourse, and compete at the highest levels of debate.
                 </p>
-                <p className="text-sm font-normal text-muted-foreground">
-                  Since our establishment in 2001, BUCC has consistently opened
-                  vibrant doors to collaborative workshops. These workshops
-                  bring together professionals and beginners from the tech
-                  industry, allowing them to cooperate and make the most of
-                  dynamic programs. We nurture students with broader concepts of
-                  today&apos;s technology-driven world.
+                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
+                  We host a wide range of events including formal debate tournaments, workshops on rhetoric and argumentation, public speaking training, and networking opportunities with accomplished speakers and debate professionals. Our members have gone on to win regional and national debate competitions, establishing themselves as leaders in communication and critical thinking.
                 </p>
-                <p className="text-sm font-normal text-muted-foreground">
-                  BUCC&apos;s success extends beyond the university premises,
-                  reaching industries and academia globally. Our members are
-                  potential global contributors, destined to lead and inspire
-                  the next generation. We strive to bring impactful changes
-                  within and beyond our community through visionary,
-                  imaginative, and efficient collaboration. Moving forward with
-                  a vision to innovate, impact and inspire as our motto says{" "}
-                  <b>Upgrade Yourself!</b>
+                <p className="text-sm font-normal text-muted-foreground leading-relaxed">
+                  Whether you&apos;re a seasoned competitor or just beginning your debate journey, our club provides the resources, mentorship, and community you need to excel. Join us as we explore complex issues, sharpen our analytical skills, and grow together in an environment that values intellectual rigor and respectful discourse.
                 </p>
               </div>
             </div>
@@ -58,8 +39,7 @@ export default function AboutUs() {
               <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
                 <div className="space-y-4 rounded-xl text-white">
                   <p className="md:3xl text-2xl">
-                    A united and vibrant community with the goal of upgrading
-                    itself.
+                    Excellence through Debate, Excellence through Community
                   </p>
                 </div>
               </div>

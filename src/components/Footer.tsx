@@ -79,37 +79,36 @@ const Footer = () => {
 
   if (!navbar_menus_paths.includes(path)) {
     return (
-      <div className="h-[55px] border-t py-4 dark:border-gray-700">
+      <div className="border-t py-4 dark:border-border">
         <div className="container flex flex-col items-center justify-between gap-2 pb-3 md:flex-row">
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            <Link href="/" className="text-blue-500 dark:text-blue-400">
-              &copy; BUCC
+          <div className="text-sm text-muted-foreground">
+            <Link href="/" className="text-primary font-semibold">
+              &copy; Debate Club
             </Link>{" "}
             {new Date().getFullYear()} - All rights reserved
           </div>
-          <div className="text-sm text-gray-500 dark:text-gray-400">
-            Made with ❤️ by{" "}
+          <div className="text-sm text-muted-foreground">
+            Made with passion by{" "}
             <a
-              href="/about/bucc-web-team"
-              className="text-blue-500 dark:text-blue-400"
+              href="/about/web-team"
+              className="text-primary font-semibold"
             >
-              BUCC R&D Web Team 2024
+              Our Web Team
             </a>
           </div>
-          <div className="hidden md:block">
-            <a
+          <div className="hidden md:block space-x-4">
+            <Link
               href="/about/privacy-policy"
-              className="text-sm text-gray-500 dark:text-gray-400"
+              className="text-sm text-muted-foreground hover:text-primary transition"
             >
               Privacy Policy
-            </a>
-
-            <a
+            </Link>
+            <Link
               href="/about/terms-of-service"
-              className="ml-4 text-sm text-gray-500 dark:text-gray-400"
+              className="text-sm text-muted-foreground hover:text-primary transition"
             >
               Terms of Service
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -117,61 +116,47 @@ const Footer = () => {
   }
 
   return (
-    <div className="relative bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
-      <div className="relative z-10 py-8 md:px-24 md:py-10">
+    <div className="relative bg-card text-card-foreground">
+      <div className="relative z-10 py-12 md:px-24 md:py-16">
         <footer className="footer text-base-content mt-4 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr]">
           <aside className="space-y-8">
             <div>
               <div className="text-center md:text-left">
-                <Image
-                  className="mx-auto cursor-pointer object-center dark:brightness-0 dark:grayscale dark:invert dark:filter md:mx-0"
-                  src={BUCCLogo}
-                  alt="BUCC Logo"
-                  width={250}
-                  height={120}
-                />
+                <h2 className="text-2xl font-bold text-primary">Debate Club</h2>
+                <p className="text-sm text-muted-foreground mt-2">Excellence through Debate</p>
               </div>
-              <div className="my-4 text-center md:text-left">
-                <p className="mb-1">
-                  <strong>Contact Number:</strong> +8801756020067
+              <div className="my-6 text-center md:text-left space-y-2">
+                <p className="text-sm">
+                  <strong>Contact:</strong> +1 (555) 123-4567
                 </p>
-                <p className="mb-1">
-                  <strong>Email:</strong> 
+                <p className="text-sm">
+                  <strong>Email:</strong> info@debateclub.edu
                 </p>
-                <p className="mb-1">
-                  <strong>For Business:</strong> marketing.bucc@g.bracu.ac.bd
-                </p>
-                <p className="mb-1">
-                  <strong>Address:</strong> Kha 226, Bir Uttam Rafiqul Islam
-                  Ave,
+                <p className="text-sm">
+                  <strong>Location:</strong> University Campus Center
                   <br />
-                  Badda, Dhaka 1212
+                  Academic Building, Room 201
                 </p>
               </div>
               <div className="flex justify-center gap-3 md:justify-start">
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-900/20 p-2">
-                  <Link href={buccSocials.facebook} target="_blank">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
+                  <Link href={buccSocials.facebook} target="_blank" className="text-primary">
                     <Facebook size={20} />
                   </Link>
                 </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-900/20 p-2">
-                  <Link href={buccSocials.linkedin} target="_blank">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
+                  <Link href={buccSocials.linkedin} target="_blank" className="text-primary">
                     <Linkedin size={20} />
                   </Link>
                 </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-900/20 p-2">
-                  <Link href={buccSocials.instagram} target="_blank">
+                <div className="flex h-9 w-9 items-center justify center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
+                  <Link href={buccSocials.instagram} target="_blank" className="text-primary">
                     <Instagram size={20} />
                   </Link>
                 </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-900/20 p-2">
-                  <Link href={buccSocials.youtube} target="_blank">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/10 hover:bg-primary/20 transition p-2">
+                  <Link href={buccSocials.youtube} target="_blank" className="text-primary">
                     <Youtube size={20} />
-                  </Link>
-                </div>
-                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-blue-900/20 p-2">
-                  <Link href={buccSocials.github} target="_blank">
-                    <Github size={20} />
                   </Link>
                 </div>
               </div>
@@ -180,12 +165,12 @@ const Footer = () => {
 
           {footer_menu.map((menu, index) => (
             <nav key={index} className="space-y-4 text-center md:text-right">
-              <h6 className="text-xl font-bold uppercase">{menu.title}</h6>
+              <h6 className="text-lg font-bold text-foreground">{menu.title}</h6>
               {menu.childrens.map((child, idx) => (
                 <Link
                   key={idx}
                   href={child.path}
-                  className="block transition duration-300 hover:text-blue-700 dark:hover:text-blue-400"
+                  className="block text-sm text-muted-foreground transition duration-300 hover:text-primary"
                 >
                   {child.title}
                 </Link>
@@ -194,25 +179,25 @@ const Footer = () => {
           ))}
         </footer>
       </div>
-      <div className="footer footer-center pb-6 pt-10 text-center md:p-5 md:pb-6">
+      <div className="border-t py-6 text-center">
         <aside>
           <p className="text-sm text-muted-foreground">
-            &copy; BUCC {new Date().getFullYear()} - All rights reserved | Made
-            with ❤️ by BUCC R&D
+            &copy; Debate Club {new Date().getFullYear()} - All rights reserved | Made with passion
           </p>
         </aside>
       </div>
       {showScroll && (
-        <div
-          className="fixed bottom-20 right-4 z-30 cursor-pointer rounded-full bg-blue-900/80 p-2 text-white dark:bg-gray-600 dark:text-gray-300"
+        <button
+          className="fixed bottom-20 right-4 z-30 rounded-full bg-primary p-2 text-primary-foreground hover:bg-primary/80 transition"
           onClick={scrollTop}
+          aria-label="Scroll to top"
         >
           <ArrowUp />
-        </div>
+        </button>
       )}
-      <div className="absolute inset-0 z-0 flex items-end justify-center overflow-clip opacity-10 md:items-center">
-        <h1 className="text-[45vw] font-extrabold text-gray-400 dark:text-gray-600 md:text-[55vw]">
-          BUCC
+      <div className="absolute inset-0 z-0 flex items-end justify-center overflow-clip opacity-5 md:items-center">
+        <h1 className="text-[45vw] font-extrabold text-foreground md:text-[55vw]">
+          D
         </h1>
       </div>
     </div>
